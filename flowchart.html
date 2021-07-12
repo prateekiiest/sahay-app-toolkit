@@ -322,11 +322,10 @@
   // Show the diagram's model in JSON format that the user may edit
   function save() {
     document.getElementById("mySavedModel").value = myDiagram.model.toJson();
-    var fso = new COMObject("Scripting.FileSystemObject"); 
-    var s = fso.CreateTextFile("./src/model.txt", True);
-    s.writeline(document.getElementById("mySavedModel").value); 
-    s.Close();
-  
+    var dataJSON = JSON.stringify(myDiagram.model.toJson());
+ var blob = new Blob([dataJSON], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "model.json");
+    
     myDiagram.isModified = false;
   }
   function load() {
