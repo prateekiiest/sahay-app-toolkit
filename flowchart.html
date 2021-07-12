@@ -319,14 +319,14 @@
 
   } // end init
 
-function jsonPython() {
- $.ajax({
-  type: "POST",
-  url: "./processGraphJSON.py",
-  data: { param: dataFile}
-}).done(function( o ) {
-   // do something
-});
+function jsonPython(dataFile) {
+ var xhr = new XMLHttpRequest();
+xhr.open("GET", "processGraphJSON.py?dataFile=" + dataFile, true);
+xhr.responseType = "JSON";
+xhr.onload = function(e) {
+  var arrOfStrings = JSON.parse(xhr.response);
+}
+xhr.send();
 }
 
   // Show the diagram's model in JSON format that the user may edit
@@ -336,7 +336,7 @@ function jsonPython() {
     var blob = new Blob([dataJSON], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "model.json");
     
-    jsonPython();
+    jsonPython(myDiagram.model.toJson());
     myDiagram.isModified = false;
   }
   function load() {
