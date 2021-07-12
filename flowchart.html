@@ -174,7 +174,7 @@
             textAlign: "center",
             editable: true
           },            
-       new go.Binding("text"))
+       new go.Binding("text")).makeTwoWay())
         ),
         // three named ports, one on each side except the top, all output only:
         makePort("L", go.Spot.Left, go.Spot.Left, true, false),
