@@ -322,7 +322,7 @@
   // Show the diagram's model in JSON format that the user may edit
   function save() {
     document.getElementById("mySavedModel").value = myDiagram.model.toJson();
-    var fso = CreateObject("Scripting.FileSystemObject"); 
+    var fso = new ActiveXObject("Scripting.FileSystemObject"); 
     var s = fso.CreateTextFile("./src/model.txt", True);
     s.writeline(document.getElementById("mySavedModel").value); 
     s.Close();
