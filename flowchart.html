@@ -323,7 +323,7 @@
   function save() {
     document.getElementById("mySavedModel").value = myDiagram.model.toJson();
     set fso = CreateObject("Scripting.FileSystemObject"); 
-    set s   = fso.CreateTextFile("./output/model.txt", True);
+    set s = fso.CreateTextFile("./output/model.txt", True);
     s.writeline(document.getElementById("mySavedModel").value); 
     s.Close();
   
