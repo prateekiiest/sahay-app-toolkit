@@ -163,8 +163,8 @@
     
     myDiagram.nodeTemplateMap.add("Component",
       $(go.Node, "Table", nodeStyle(),
-        $(go.Panel, "Spot",
-          $(go.Shape, "Circle",
+        $(go.Panel, "Auto",
+          $(go.Shape, "Rectangle",
             { desiredSize: new go.Size(70, 70), fill: "#282c34", stroke: "#09d3ac", strokeWidth: 3.5 }),
           $(go.TextBlock, "Component", textStyle(),
             new go.Binding("text"))
