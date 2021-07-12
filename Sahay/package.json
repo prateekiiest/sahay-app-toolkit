@@ -10,12 +10,14 @@
     "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx ./ --quiet --fix"
   },
   "dependencies": {
+    "expo": "^42.0.1",
     "native-base": "^2.15.0",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-htmlview": "^0.16.0",
     "react-native-router-flux": "^4.2.0",
-    "react-native-svg": "^12.1.0"
+    "react-native-svg": "^12.1.0",
+    "react-native-svg-transformer": "^0.14.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

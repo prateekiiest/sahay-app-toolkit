@@ -1,5 +1,4 @@
-import React from 'react';
-import {ReactElement} from 'react';
+import React, { ReactElement } from 'react';
 import {View} from 'react-native';
 import {PolarQuestionComponent} from '../templateComponents/PolarQuestionComponent';
 import {IPolarQuestionArray} from '../templateComponents/PolarQuestionComponent/PolarQuestionComponent.types';
