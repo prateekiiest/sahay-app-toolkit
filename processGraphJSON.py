@@ -2,4 +2,5 @@ import sys
 
 
 def process(dataFile):
-   print(dataFile['nodeDataArray'])
+   print("Under process file");
+   #print(dataFile['nodeDataArray'])
