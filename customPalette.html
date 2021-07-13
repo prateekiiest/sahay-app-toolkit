@@ -159,14 +159,22 @@
     Diagram model:
   </div>
   <textarea id="mySavedModel" style="width:100%;height:200px">
-{ "class": "go.GraphLinksModel",
+{ "class": "GraphLinksModel",
   "nodeDataArray": [
-    { "key": 1, "text": "Vignette1", "figure":"Circle", "color":"green", "location":"0 0" },
-    { "key": 2, "text": "MC1", "figure":"Rectangle", "color":"red", "location":"100 0" }
- ],
+{"key":1,"text":"Vignette1","figure":"Circle","color":"green","location":"0 0"},
+{"key":2,"text":"MC1","figure":"Rectangle","color":"red","location":"170 -4"},
+{"text":"V1/quid1","color":"orange","figure":"Ellipse","key":-3,"location":"-47.84375 93", "descriptionText": "Here is a story about Rahul..... How well do you relate to him?", "sliderOptions": "Somewhat, Okayish, Extremely Well"},
+{"text":"V1/quid2","color":"orange","figure":"Ellipse","key":-4,"location":"60.15625 93",  "descriptionText": "Here is a story about Arjun..... How well do you relate to him?", "sliderOptions": "Somewhat, Okayish, Extremely Well"},
+{"text":"MC1/quid1","color":"orange","figure":"Ellipse","key":-5,"location":"186.15625 66", "descriptionText": "How do you feel today?", "options": "Feeling distressed, Feeling anxious"}
+],
   "linkDataArray": [
-    { "from":1, "to":2 }
- ]}
+{"from":1,"to":2},
+{"from":1,"to":-3},
+{"from":-3,"to":-4},
+{"from":-4,"to":1},
+{"from":2,"to":-5},
+{"from":-5,"to":2}
+]}
   </textarea>
 </div>
     </div>
