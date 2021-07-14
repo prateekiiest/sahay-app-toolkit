@@ -175,6 +175,13 @@
           function save() {
             document.getElementById("mySavedModel").value =
               myDiagram.model.toJson();
+
+            var dataJSON = JSON.stringify(myDiagram.model.toJson());
+            var blob = new Blob([dataJSON], {
+              type: "text/plain;charset=utf-8",
+            });
+            saveAs(blob, "contents.json");
+
             myDiagram.isModified = false;
           }
           function load() {
